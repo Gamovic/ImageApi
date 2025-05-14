@@ -22,7 +22,7 @@ METADATA_FILE = "images_metadata.json"
 os.makedirs(UPLOAD_DIR, exist_ok=True)
 
 # Security settings
-API_KEY = os.getenv("API_KEY", "thisisapikey")  # Default for development
+API_KEY = os.getenv("API_KEY", "imageapikey")  # Default for development
 API_KEY_NAME = "X-API-Key"
 api_key_header = APIKeyHeader(name=API_KEY_NAME, auto_error=False)
 
@@ -85,14 +85,14 @@ if not metadata:
                 }
     save_metadata(metadata)
 
-@app.get("/api/images")
+@app.get("/images")
 async def list_images():
     try:
         return list(metadata.values())
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
-@app.get("/api/images/{image_id}")
+@app.get("/images/{image_id}")
 async def get_image(image_id: str):
     try:
         if image_id not in metadata:
@@ -118,7 +118,7 @@ async def get_image(image_id: str):
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
-@app.delete("/api/images/{image_id}")
+@app.delete("/images/{image_id}")
 async def delete_image(
     image_id: str,
     api_key: str = Depends(get_api_key)
@@ -159,7 +159,7 @@ async def delete_image(
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
-@app.post("/api/images")
+@app.post("/images")
 async def upload_image(
     file: UploadFile = File(...),
     filename: Optional[str] = Form(None),
