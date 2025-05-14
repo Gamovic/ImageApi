@@ -7,6 +7,8 @@ from fastapi.middleware.cors import CORSMiddleware
 from dotenv import load_dotenv
 import io
 import os
+from fastapi import APIKeyHeader
+from PIL import Image
 import uuid
 import json
 from starlette.status import HTTP_403_FORBIDDEN, HTTP_404_NOT_FOUND, HTTP_400_BAD_REQUEST

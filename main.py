@@ -1,5 +1,6 @@
 import os
 from fastapi import APIKeyHeader
+from PIL import Image
 
 # Security settings
 API_KEY = os.getenv("API_KEY")
