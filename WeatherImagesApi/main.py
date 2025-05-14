@@ -226,3 +226,7 @@ async def upload_image(
         if 'path' in locals() and os.path.exists(path):
             os.remove(path)
         raise HTTPException(status_code=500, detail=str(e)) 
+        
+@app.get("/healthz")
+async def health_check():
+    return {"status": "healthy"}
