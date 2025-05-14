@@ -19,13 +19,13 @@ load_dotenv()
 
 app = FastAPI()
 
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"],  # For development only
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
+#app.add_middleware(
+#    CORSMiddleware,
+#    allow_origins=["*"],  # For development only
+ #   allow_credentials=True,
+#    allow_methods=["*"],
+#    allow_headers=["*"],
+#)
 
 UPLOAD_DIR = "uploaded_images"
 PROJECT_IMAGES_DIR = "images"
