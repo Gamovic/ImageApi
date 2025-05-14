@@ -2,7 +2,7 @@ from fastapi import FastAPI, File, UploadFile, HTTPException, Security, Depends,
 from fastapi.responses import JSONResponse, Response
 from fastapi.security.api_key import APIKeyHeader
 from fastapi.staticfiles import StaticFiles
-from PIL import Image
+
 from dotenv import load_dotenv
 import io
 import os
