@@ -1,0 +1,114 @@
+{
+  "35b44b29-37cb-419a-b1a3-3e8f062cc4c6": {
+    "id": "35b44b29-37cb-419a-b1a3-3e8f062cc4c6",
+    "filename": "arrow.png",
+    "url": "/images/arrow.png",
+    "source": "project",
+    "dimensions": {
+      "width": 512,
+      "height": 512
+    },
+    "format": "PNG",
+    "mode": "RGBA",
+    "size_bytes": 5501,
+    "size_kb": 5.37
+  },
+  "ac83c03f-9162-4acd-9bdc-c6bc416b8e51": {
+    "id": "ac83c03f-9162-4acd-9bdc-c6bc416b8e51",
+    "filename": "thermometer_cold.png",
+    "url": "/images/thermometer_cold.png",
+    "source": "project",
+    "dimensions": {
+      "width": 512,
+      "height": 512
+    },
+    "format": "PNG",
+    "mode": "RGBA",
+    "size_bytes": 15751,
+    "size_kb": 15.38
+  },
+  "6909c146-0585-45e0-8eef-0e9552a28b19": {
+    "id": "6909c146-0585-45e0-8eef-0e9552a28b19",
+    "filename": "thermometer_hot.png",
+    "url": "/images/thermometer_hot.png",
+    "source": "project",
+    "dimensions": {
+      "width": 512,
+      "height": 512
+    },
+    "format": "PNG",
+    "mode": "RGBA",
+    "size_bytes": 15768,
+    "size_kb": 15.4
+  },
+  "7569fd2e-4f93-4192-a4f0-ae0243d64c78": {
+    "id": "7569fd2e-4f93-4192-a4f0-ae0243d64c78",
+    "filename": "thermometer_low.png",
+    "url": "/images/thermometer_low.png",
+    "source": "project",
+    "dimensions": {
+      "width": 512,
+      "height": 512
+    },
+    "format": "PNG",
+    "mode": "RGBA",
+    "size_bytes": 15758,
+    "size_kb": 15.39
+  },
+  "7a68af96-ec58-457c-8c19-c3676889003a": {
+    "id": "7a68af96-ec58-457c-8c19-c3676889003a",
+    "filename": "thermometer_medium.png",
+    "url": "/images/thermometer_medium.png",
+    "source": "project",
+    "dimensions": {
+      "width": 512,
+      "height": 512
+    },
+    "format": "PNG",
+    "mode": "RGBA",
+    "size_bytes": 15770,
+    "size_kb": 15.4
+  },
+  "7b4b27eb-a593-4057-ae08-0cb20cf5577d": {
+    "id": "7b4b27eb-a593-4057-ae08-0cb20cf5577d",
+    "filename": "thermometer_verycold.png",
+    "url": "/images/thermometer_verycold.png",
+    "source": "project",
+    "dimensions": {
+      "width": 512,
+      "height": 512
+    },
+    "format": "PNG",
+    "mode": "RGBA",
+    "size_bytes": 15732,
+    "size_kb": 15.36
+  },
+  "5d0de7eb-4210-47fa-9310-ce812140e0e6": {
+    "id": "5d0de7eb-4210-47fa-9310-ce812140e0e6",
+    "filename": "thermometer_veryhot.png",
+    "url": "/images/thermometer_veryhot.png",
+    "source": "project",
+    "dimensions": {
+      "width": 512,
+      "height": 512
+    },
+    "format": "PNG",
+    "mode": "RGBA",
+    "size_bytes": 15822,
+    "size_kb": 15.45
+  },
+  "e5470baf-3753-4635-8a5b-775e2b1f591f": {
+    "id": "e5470baf-3753-4635-8a5b-775e2b1f591f",
+    "filename": "thermometer_warm.png",
+    "url": "/images/thermometer_warm.png",
+    "source": "project",
+    "dimensions": {
+      "width": 512,
+      "height": 512
+    },
+    "format": "PNG",
+    "mode": "RGBA",
+    "size_bytes": 15774,
+    "size_kb": 15.4
+  }
+}
