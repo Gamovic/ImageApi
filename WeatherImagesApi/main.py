@@ -229,7 +229,7 @@ async def upload_image(
         metadata[image_id] = {
             "id": image_id,
             "filename": unique_filename,
-            "url": f"/uploaded/{unique_filename}",
+            "url": f"https://imageapi-gbfo.onrender.com/uploaded/{unique_filename}",
             "source": "uploaded",
             **image_info,
             "original_dimensions": {"width": image.width, "height": image.height}
