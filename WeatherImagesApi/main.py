@@ -17,15 +17,19 @@ from typing import Optional
 # Load environment variables from .env file
 load_dotenv()
 
-app = FastAPI()
+app = FastAPI(
+    title="Images API",
+    description="An API to get and post images",
+    version="1.0.0"
+)
 
-#app.add_middleware(
-#    CORSMiddleware,
-#    allow_origins=["*"],  # For development only
- #   allow_credentials=True,
-#    allow_methods=["*"],
-#    allow_headers=["*"],
-#)
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # For development only
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 UPLOAD_DIR = "uploaded_images"
 PROJECT_IMAGES_DIR = "images"
@@ -33,6 +37,8 @@ METADATA_FILE = "images_metadata.json"
 os.makedirs(UPLOAD_DIR, exist_ok=True)
 
 # Security settings
+SECRET_KEY = os.getenv("SECRET_KEY")
+DEBUG = os.getenv("DEBUG")
 API_KEY = os.getenv("API_KEY")
 if not API_KEY:
     raise ValueError("API_KEY environment variable is not set. Please set it in your .env file.")
