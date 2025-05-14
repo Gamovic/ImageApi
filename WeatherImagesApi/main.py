@@ -17,6 +17,14 @@ load_dotenv()
 
 app = FastAPI()
 
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # For development only
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 UPLOAD_DIR = "uploaded_images"
 PROJECT_IMAGES_DIR = "images"
 METADATA_FILE = "images_metadata.json"
@@ -227,14 +235,6 @@ async def upload_image(
         if 'path' in locals() and os.path.exists(path):
             os.remove(path)
         raise HTTPException(status_code=500, detail=str(e)) 
-        
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"],  # For development only
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
 
 @app.get("/healthz")
 async def health_check():
