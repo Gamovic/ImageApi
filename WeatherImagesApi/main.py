@@ -2,6 +2,7 @@ from fastapi import FastAPI, File, UploadFile, HTTPException, Security, Depends,
 from fastapi.responses import JSONResponse, Response
 from fastapi.security.api_key import APIKeyHeader
 from fastapi.staticfiles import StaticFiles
+from fastapi.middleware.cors import CORSMiddleware
 
 from dotenv import load_dotenv
 import io
@@ -227,6 +228,14 @@ async def upload_image(
             os.remove(path)
         raise HTTPException(status_code=500, detail=str(e)) 
         
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # For development only
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 @app.get("/healthz")
 async def health_check():
     return {"status": "healthy"}
